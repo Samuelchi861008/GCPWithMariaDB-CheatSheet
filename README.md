@@ -20,7 +20,7 @@
   * 於使用者資料夾下找到『.ssh』中的『id_rsa.pub』檔案，將其內容複製到 VM 的 SSH Key 中。
   * 於終端機便可以直接輸入```$ ssh {VM ip address}```。
 
-## Step 4. 修改root密碼
+## Step 4. 修改VM root密碼
  * ```$ sudo passwd root```。
  * 輸入新密碼。
  * 再次輸入。
