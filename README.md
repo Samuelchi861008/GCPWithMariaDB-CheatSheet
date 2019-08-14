@@ -37,3 +37,21 @@
    * ```$ sudo apt-get install mariadb-server```
  * 檢查版本
    * ```$ mysql -V```
+
+## Step 6. 設定 MariaDB
+ * 切換VM權限至root
+   * ```$ su```
+   * 輸入VM root密碼
+ * 設定MariaDB
+   * ```# mysql_secure_installation```
+   * 變更MariaDB root密碼，輸入『Y』，即可變更密碼
+   * 移除匿名使用者，輸入『Y』
+   * 移除遠端操作root的權限，輸入『n』
+   * 移除測試資料庫，輸入『Y』
+   * 重新載入權限的table資訊，輸入『Y』
+ * 登入MariaDB root
+   * ```$ mysql -u root -p```
+   * 輸入MariaDB root密碼
+ * MariaDB指令
+   * 確認MariaDB版本
+     ```> SELECT VERSION();```
