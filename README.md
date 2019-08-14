@@ -56,3 +56,9 @@
    * 確認MariaDB版本 
    
      ```> SELECT VERSION();```
+   * 查看資料庫 
+   
+     ```> show databases;```
+   * 查看資料庫資訊 
+   
+     ```> status```
