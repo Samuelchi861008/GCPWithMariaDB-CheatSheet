@@ -62,3 +62,11 @@
    * 查看資料庫資訊 
    
      ```> status```
+ * 資料庫備份與還原
+   * 備份 
+     
+     ```$ mysqldump -u root -p --all-databases > backup.sql;``` 
+     
+   * 還原 
+   
+     ```$ mysql -u root -p < mysql.sql```
