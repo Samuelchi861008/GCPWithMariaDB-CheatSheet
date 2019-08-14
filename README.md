@@ -69,4 +69,10 @@
      
    * 還原 
    
-     ```$ mysql -u root -p < mysql.sql```
+     ```$ mysql -u root -p < mysql.sql``` 
+     
+ 
+## Step 7. GCP Firewall Rules設定
+  * 至 VPC network 新增防火牆規則
+  * 名稱(隨意)、目標代碼(隨意)、來源 IP 範圍(0.0.0.0/0)、port(tcp:3306)、其他不變
+  * 回到VM 將『目標代碼』加入『網路標記』
