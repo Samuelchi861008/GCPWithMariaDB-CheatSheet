@@ -14,3 +14,13 @@
     * 選擇 Debian GNU/Linux 9(stretch)或其他廠牌Linux皆可，並設定SSD，看需求設定SSD大小，建議15G。
   * Identity and API access
     * 選擇預設。
+     
+## Step 3. 設定SSH連線
+  * 於終端機輸入ssh-keygen，連續按Enter至結束。
+  * 於使用者資料夾下找到『.ssh』中的『id_rsa.pub』檔案，將其內容複製到 VM 的 SSH Key 中。
+  * 於終端機便可以直接輸入```$ ssh {VM ip address}```。
+
+## Step 4. 修改root密碼
+ * ```$ sudo passwd root```。
+ * 輸入新密碼。
+ * 再次輸入。
