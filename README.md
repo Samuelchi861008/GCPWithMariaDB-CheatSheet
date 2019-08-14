@@ -27,13 +27,13 @@
 
 ## Step 5. 安裝MariaDB
  * 更新apt和安裝相依套件
-  * ```$ sudo apt update && apt upgrade```
-  * ```$ sudo apt-get install software-properties-common dirmngr```
+   * ```$ sudo apt update && apt upgrade```
+   * ```$ sudo apt-get install software-properties-common dirmngr```
  * 添加 MariaDB signing key
-  * ```$ sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0xF1656F24C74CD1D8```
+   * ```$ sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0xF1656F24C74CD1D8```
  * 下載 MariaDB
-  * ```$ sudo add-apt-repository 'deb [arch=amd64,i386,ppc64el] http://ftp.ubuntu-tw.org/mirror/mariadb/repo/10.3/debian stretch main'```
+   * ```$ sudo add-apt-repository 'deb [arch=amd64,i386,ppc64el] http://ftp.ubuntu-tw.org/mirror/mariadb/repo/10.3/debian stretch main'```
  * 安裝 mariadb-serverMariaDB
-  * ```$ sudo apt-get install mariadb-server```
+   * ```$ sudo apt-get install mariadb-server```
  * 檢查版本
-  * ```$ mysql -V```
+   * ```$ mysql -V```
