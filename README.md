@@ -53,5 +53,6 @@
    * ```$ mysql -u root -p```
    * 輸入MariaDB root密碼
  * MariaDB指令
-   * 確認MariaDB版本
+   * 確認MariaDB版本 
+   
      ```> SELECT VERSION();```
