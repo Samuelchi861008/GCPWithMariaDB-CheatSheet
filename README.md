@@ -62,6 +62,9 @@
    * 查看資料庫資訊 
    
      ```> status```
+ * 設定資料庫可以遠端連線
+   * ```$ sudo vi /etc/mysql/mariadb.conf.d/50-server.cnf```
+   * ```bind-address = 0.0.0.0```
  * 資料庫備份與還原
    * 備份 
      
