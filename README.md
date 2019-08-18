@@ -18,7 +18,8 @@
 ## Step 3. 設定SSH連線
   * 於終端機輸入ssh-keygen，連續按Enter至結束。
   * 於使用者資料夾下找到『.ssh』中的『id_rsa.pub』檔案，將其內容複製到 VM 的 SSH Key 中。
-  * 於終端機便可以直接輸入```$ ssh {VM ip address}```。
+  * 於終端機便可以直接輸入```$ ssh {VM ip address}```進行連線。
+  * 若出現『WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!』錯誤訊息，輸入```$ ssh -R {VM ip address}```，再重新連線。
 
 ## Step 4. 修改VM root密碼
  * ```$ sudo passwd root```。
@@ -61,7 +62,11 @@
      ```> show databases;```
    * 查看資料庫資訊 
    
-     ```> status```
+     ```> status``` 
+   * 創建資料庫
+    
+     ```> CREATE DATABASE `{database name}`;``` 
+     
  * 設定資料庫可以遠端連線
    * ```$ sudo vi /etc/mysql/mariadb.conf.d/50-server.cnf```
    * ```bind-address = 0.0.0.0```
