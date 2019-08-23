@@ -92,3 +92,7 @@
   * 即可在 /var/www/html 中放置已寫好 html 專案
   * 並使用外部IP連線
   * 若要關閉Apache index頁面，至 /etc/apache2/apache2.conf，將 ```Options Indexes FollowSymLinks``` 改成 ```Options FollowSymLinks```
+  * Apache 指令
+    * 開啟 ```$ sudo service apache2 start```
+    * 重啟 ```$ sudo service apache2 restart```
+    * 停止 ```$ sudo service apache2 stop```
