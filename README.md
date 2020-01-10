@@ -1,9 +1,10 @@
-# GCP with MariaDB
+# GCP with DB cheatsheet
 
 ## Step 1. 註冊 Google Cloud Platform (GCP)
+  * 網址：https://cloud.google.com/free/docs/gcp-free-tier
   * 準備一張信用卡，於註冊時需過卡，並非真正刷卡，到期不會自動扣款。
 
-## Step 2. 建立 Compute engine VM
+## Step 2. 從 Compute engine 建立 VM 執行個體
   * Name
     * 隨意取名。
   * Region
