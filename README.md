@@ -1,4 +1,4 @@
-# GCP with DB cheatsheet
+# GCP with DB cheatsheet (free forever)
 
 ## Step 1. 註冊 Google Cloud Platform (GCP)
   * 網址：https://cloud.google.com/free/docs/gcp-free-tier
