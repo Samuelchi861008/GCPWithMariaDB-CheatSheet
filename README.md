@@ -8,17 +8,22 @@
   * Name
     * 隨意取名。
   * Region
-    * 選擇 asia-east-1(Taiwan) 與 asia-east1-c，資料中心於彰化，速度比較快。
+    * 選擇 us-west1(奧勒岡州) 與 us-west1-b (永久免費方案)。
+    * 選擇 asia-east-1(Taiwan) 與 asia-east1-c，資料中心於彰化，速度比較快，但非永久免費方案。
   * Machine type
-    * 無特殊需求設定最小即可。
+    * f1-micro (1 個 vCPU，614MB 記憶體)(永久免費方案)。
   * Boot disk
-    * 選擇 Debian GNU/Linux 9(stretch)或其他廠牌Linux皆可，並設定SSD，看需求設定SSD大小，建議15G。
+    * 選擇 Debian GNU/Linux 9(stretch) 30GB HDD (永久免費方案)。
+    * 選擇 Debian GNU/Linux 9(stretch) 15GB SSD，速度比較快，但非永久免費方案。
   * Identity and API access
+    * 選擇預設。
+  * Firewall
+    * 允許 HTTP 流量、允許 HTTPS 流量。
     * 選擇預設。
      
 ## Step 3. 設定SSH連線
-  * 於終端機輸入ssh-keygen，連續按Enter至結束。
-  * 於使用者資料夾下找到『.ssh』中的『id_rsa.pub』檔案，將其內容複製到 VM 的 SSH Key 中。
+  * 於自己電腦終端機(命令提示字元)輸入ssh-keygen，連續按Enter至結束。
+  * 於自己電腦使用者資料夾下找到『.ssh』中的『id_rsa.pub』檔案，將其內容複製到 VM 的 SSH Key 中。
   * 於終端機便可以直接輸入```$ ssh {VM ip address}```進行連線。
   * 若出現『WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!』錯誤訊息，輸入```$ ssh -R {VM ip address}```，再重新連線。
 
