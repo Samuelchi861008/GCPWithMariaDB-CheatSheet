@@ -104,3 +104,12 @@
     * 開啟 ```$ sudo service apache2 start```
     * 重啟 ```$ sudo service apache2 restart```
     * 停止 ```$ sudo service apache2 stop```
+
+
+## Step 9. 設定時區
+  * 設定linux主機時區
+    * ```$ sudo dpkg-reconfigure tzdata```
+    * 選擇 Asia -> Taipei
+  * 設定 MySQL 時區
+    * ```> SET GLOBAL time_zone = '+8:00';```
+  * 最後重啟資料庫 ```$ service mysqld restart ```
