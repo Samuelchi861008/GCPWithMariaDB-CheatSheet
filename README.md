@@ -75,8 +75,9 @@
      
  * 設定資料庫可以遠端連線
    * ```$ sudo vi /etc/mysql/mariadb.conf.d/50-server.cnf```
-   * ```bind-address = 0.0.0.0```
-   * ```> GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '遠端連線密碼' WITH GRANT OPTION;```
+   * 將 ```bind-address = 127.0.0.1``` 改成 ```bind-address = 0.0.0.0```
+   * 進入資料庫 ```> GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '遠端連線密碼' WITH GRANT OPTION;```
+   * 重啟資料庫 ```$ service mysqld restart ```
  * 資料庫備份與還原
    * 備份 
      
