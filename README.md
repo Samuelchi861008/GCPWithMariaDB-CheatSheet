@@ -32,7 +32,7 @@
  * 輸入新密碼。
  * 再次輸入。
 
-## Step 5. 安裝MariaDB
+## Step 5. 安裝MariaDB (即 MySQL)
  * 更新apt和安裝相依套件
    * ```$ sudo apt update && apt upgrade```
    * ```$ sudo apt-get install software-properties-common dirmngr```
