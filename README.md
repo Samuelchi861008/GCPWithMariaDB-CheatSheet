@@ -25,7 +25,7 @@
   * 於自己電腦終端機(命令提示字元)輸入ssh-keygen，連續按Enter至結束。
   * 於自己電腦使用者資料夾下找到『.ssh』中的『id_rsa.pub』檔案，將其內容複製到 VM 的 SSH Key 中。
   * 於終端機便可以直接輸入```$ ssh {VM ip address}```進行連線。
-  * 若出現『WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!』錯誤訊息，輸入```$ ssh -R {VM ip address}```，再重新連線。
+  * 若出現『WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!』錯誤訊息，輸入```$ ssh-keygen -R {VM ip address}```，再重新連線。
 
 ## Step 4. 修改VM root密碼
  * ```$ sudo passwd root```。
