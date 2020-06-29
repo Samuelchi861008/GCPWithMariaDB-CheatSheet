@@ -115,3 +115,11 @@
   * 設定 MySQL 時區
     * ```> SET GLOBAL time_zone = '+8:00';```
   * 最後重啟資料庫 ```$ service mysqld restart ```
+
+
+## Step 10. Code Server 建置 (可選)
+  * 下載檔案並將 code-server 整個資料夾傳入 Server
+    * https://drive.google.com/file/d/1D7gtcqem4mDxmRcM94_M7pjevLDjkQQa/view?usp=sharing
+  * 在 Server 上創一個 shell 檔案，內容為：
+    * ```export PASSWORD="密碼" && nohup ./code-server --host 0.0.0.0 --port 80 &```
+  * 在 /etc/crontab 定時啟動 shell 檔案
