@@ -118,7 +118,7 @@
 
 
 ## Step 10. Code Server 建置 (可選)
-  * 下載檔案並將 code-server 整個資料夾傳入 Server
+  * 下載所有檔案並將 code-server 整個資料夾傳入 Server
     * https://drive.google.com/file/d/1D7gtcqem4mDxmRcM94_M7pjevLDjkQQa/view?usp=sharing
   * 在 Server 上創一個 shell 檔案，內容為：
     * ```export PASSWORD="密碼" && nohup ./code-server --host 0.0.0.0 --port 80 &```
