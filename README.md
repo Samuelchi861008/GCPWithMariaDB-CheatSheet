@@ -72,6 +72,23 @@
    * 創建資料庫
     
      ```> CREATE DATABASE `{database name}`;``` 
+ * 設定文字編碼 (可支援 iPhone 表情符號)
+  在 /etc/my.cnf 設定
+  ```
+  [client]
+  default-character-set=utf8mb4
+
+
+  [mysql]
+  default-character-set=utf8mb4
+
+
+  [mysqld]
+  character-set-server = utf8mb4
+  collation-server = utf8mb4_unicode_ci
+  init_connect = 'SET NAMES utf8mb4'
+  character-set-client-handshake = false
+  ```
      
  * 設定資料庫可以遠端連線
    * ```$ sudo vi /etc/mysql/mariadb.conf.d/50-server.cnf```
