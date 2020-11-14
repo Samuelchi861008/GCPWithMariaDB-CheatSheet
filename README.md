@@ -139,3 +139,16 @@
   * 在 Server 上創一個 shell 檔案，內容為：
     * ```export PASSWORD="密碼" && nohup ./code-server --host 0.0.0.0 --port 80 &```
   * 在 /etc/crontab 定時啟動 shell 檔案
+ 
+ 
+ ## Step 11. 安裝 Jenkins
+  * ```$ sudo apt update```
+  * ```$ sudo apt install openjdk-8-jdk```
+  * ```$ wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -```
+  * ```$ sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'```
+  * ```$ sudo apt install jenkins```
+  * ```$ sudo systemctl start jenkins```
+  * ```$ sudo systemctl enable jenkins```
+  * 即可前往網址，預設port為8080
+  * 查找預設密碼：
+    * ```$ sudo cat /var/lib/jenkins/secrets/initialAdminPassword```
