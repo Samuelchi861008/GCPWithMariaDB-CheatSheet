@@ -13,8 +13,8 @@
   * Machine type
     * f1-micro (1 個 vCPU，614MB 記憶體)(永久免費方案)。
   * Boot disk
-    * 選擇 Debian GNU/Linux 9(stretch) 30GB HDD (永久免費方案)。
-    * 選擇 Debian GNU/Linux 9(stretch) 15GB SSD，速度比較快，但非永久免費方案。
+    * 選擇 Ubuntu 18.04 LTS 30GB HDD (永久免費方案)。
+    * 選擇 Ubuntu 18.04 LTS 15GB SSD，速度比較快，但非永久免費方案。
   * Identity and API access
     * 選擇預設。
   * Firewall
