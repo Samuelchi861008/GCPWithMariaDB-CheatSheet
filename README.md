@@ -37,7 +37,7 @@
     * 找到 ```#Port 22``` 將註解移除
     * 找到 ```PasswordAuthenticate no``` 將 no 改成 yes
     * 找到 ```PermitRootLogin without-password``` 將 without-password 改成 yes
-    * 在檔案後面加入 ```AllowUsers {使用者名稱}```
+    * 在檔案後面加入 ```AllowUsers {其餘使用者名稱}```
   * 重啟 SSH
     * ```$ sudo service ssh restart```
 
