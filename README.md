@@ -32,45 +32,27 @@
  * 輸入新密碼。
  * 再次輸入。
 
-## Step 5. 安裝MariaDB (即 MySQL)
- * 更新apt和安裝相依套件
-   * ```$ sudo apt update && apt upgrade```
-   * ```$ sudo apt-get install software-properties-common dirmngr```
- * 添加 MariaDB signing key
-   * ```$ sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0xF1656F24C74CD1D8```
- * 下載 MariaDB
-   * ```$ sudo add-apt-repository 'deb [arch=amd64,i386,ppc64el] http://ftp.ubuntu-tw.org/mirror/mariadb/repo/10.3/debian stretch main'```
- * 安裝 mariadb-serverMariaDB
-   * ```$ sudo apt-get install mariadb-server```
- * 檢查版本
-   * ```$ mysql -V```
+## Step 5. 安裝 MySQL
+ * 下載與安裝 MySQL
+   * ```$ sudo apt install mysql-server```
 
-## Step 6. 設定 MariaDB
- * 切換VM權限至root
-   * ```$ su```
-   * 輸入VM root密碼
+## Step 6. 設定 MySQL
+ * 把 root 改為使用密碼驗證登入
+   * ```$ sudo mysql```
+   * ```> SELECT user, authentication_string, plugin, host FROM mysql.user WHERE user = 'root';```
+   * ```> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '{root 要修改的密碼}';```
+ * 讓設定生效
+   * ```> FLUSH PRIVILEGES;``` 
  * 設定MariaDB
-   * ```# mysql_secure_installation```
-   * 變更MariaDB root密碼，輸入『Y』，即可變更密碼
-   * 移除匿名使用者，輸入『Y』
-   * 移除遠端操作root的權限，輸入『n』
-   * 移除測試資料庫，輸入『Y』
-   * 重新載入權限的table資訊，輸入『Y』
- * 登入MariaDB root
+ * 以 root 登入 MySQL
    * ```$ mysql -u root -p```
-   * 輸入MariaDB root密碼
- * MariaDB指令
-   * 確認MariaDB版本 
-   
-     ```> SELECT VERSION();```
-   * 查看資料庫 
-   
+   * 輸入重新設定後的 root 密碼
+ * MySQL 常用指令
+   * 查看所有資料庫 
      ```> show databases;```
-   * 查看資料庫資訊 
-   
+   * 查看資料庫資訊  
      ```> status``` 
-   * 創建資料庫
-    
+   * 創建資料庫  
      ```> CREATE DATABASE `{database name}`;``` 
  * 設定文字編碼 (可支援 iPhone 表情符號)，在 /etc/my.cnf 貼上以下程式
    ```
@@ -90,10 +72,10 @@
    ```
      
  * 設定資料庫可以遠端連線
-   * ```$ sudo vi /etc/mysql/mariadb.conf.d/50-server.cnf```
+   * ```$ sudo vi /etc/mysql/mysql.conf.d```
    * 將 ```bind-address = 127.0.0.1``` 改成 ```bind-address = 0.0.0.0```
    * 進入資料庫 ```> GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '遠端連線密碼' WITH GRANT OPTION;```
-   * 重啟資料庫 ```$ service mysqld restart ```
+   * 重啟資料庫 ```$ sudo /etc/init.d/mysql restart ```
    * 方可使用 MySQL workbench 或其他軟體進行連線
    
  * 資料庫備份與還原
