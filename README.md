@@ -96,9 +96,18 @@
   * 至 VPC network 新增防火牆規則
   * 名稱(隨意)、目標代碼(隨意)、來源 IP 範圍(0.0.0.0/0)、port(tcp:3306)、其他不變
   * 回到VM 將『目標代碼』加入『網路標記』
-  
 
-## Step 8. 安裝 Apach (可選)
+
+## Step 8. 設定時區
+  * 設定linux主機時區
+    * ```$ sudo dpkg-reconfigure tzdata```
+    * 選擇 Asia -> Taipei
+  * 設定 MySQL 時區
+    * ```> SET GLOBAL time_zone = '+8:00';```
+  * 最後重啟資料庫 ```$ sudo /etc/init.d/mysql restart ```
+
+
+## Step 9. 安裝 Apach (可選)
   * ```$ sudo apt-get install apache2```
   * ```$ sudo service apache2 restart```
   * 即可在 /var/www/html 中放置已寫好 html 專案
@@ -108,15 +117,6 @@
     * 開啟 ```$ sudo service apache2 start```
     * 重啟 ```$ sudo service apache2 restart```
     * 停止 ```$ sudo service apache2 stop```
-
-
-## Step 9. 設定時區
-  * 設定linux主機時區
-    * ```$ sudo dpkg-reconfigure tzdata```
-    * 選擇 Asia -> Taipei
-  * 設定 MySQL 時區
-    * ```> SET GLOBAL time_zone = '+8:00';```
-  * 最後重啟資料庫 ```$ sudo /etc/init.d/mysql restart ```
 
 
 ## Step 10. Code Server 建置 (可選)
