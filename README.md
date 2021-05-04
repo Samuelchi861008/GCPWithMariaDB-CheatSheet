@@ -20,8 +20,15 @@
   * Firewall
     * 允許 HTTP 流量、允許 HTTPS 流量。
     * 選擇預設。
+
+
+## Step 3. 修改VM root密碼
+ * ```$ sudo passwd root```。
+ * 輸入新密碼。
+ * 再次輸入。
+
      
-## Step 3. 設定SSH連線
+## Step 4. 設定SSH連線
   * 於自己電腦終端機(命令提示字元)輸入ssh-keygen，連續按Enter至結束。
   * 於自己電腦使用者資料夾下找到『.ssh』中的『id_rsa.pub』檔案，將其內容複製到 VM 的 SSH Key 中。
   * 於終端機便可以直接輸入```$ ssh {VM ip address}```進行連線。
@@ -29,14 +36,10 @@
   * 進到 /etc/ssh/sshd_config 進行設定不需再使用 SSH Key
     * 找到 ```#Port 22``` 將註解移除
     * 找到 ```PasswordAuthenticate no``` 將 no 改成 yes
+    * 找到 ```PermitRootLogin without-password``` 將 without-password 改成 yes
     * 在檔案後面加入 ```AllowUsers {使用者名稱}```
   * 重啟 SSH
     * ```$ sudo service ssh restart```
-
-## Step 4. 修改VM root密碼
- * ```$ sudo passwd root```。
- * 輸入新密碼。
- * 再次輸入。
 
 ## Step 5. 安裝 MySQL
  * 下載與安裝 MySQL
