@@ -54,7 +54,7 @@
      ```> status``` 
    * 創建資料庫  
      ```> CREATE DATABASE `{database name}`;``` 
- * 設定文字編碼 (可支援 iPhone 表情符號)，在 /etc/my.cnf 貼上以下程式
+ * 設定文字編碼 (可支援 iPhone 表情符號)，在 /etc/mysql/my.cnf 貼上以下程式
    ```
    [client]
    default-character-set=utf8mb4
