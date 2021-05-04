@@ -26,6 +26,10 @@
   * 於自己電腦使用者資料夾下找到『.ssh』中的『id_rsa.pub』檔案，將其內容複製到 VM 的 SSH Key 中。
   * 於終端機便可以直接輸入```$ ssh {VM ip address}```進行連線。
   * 若出現『WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!』錯誤訊息，輸入```$ ssh-keygen -R {VM ip address}```，再重新連線。
+  * 進到 /etc/ssh/sshd_config 進行設定不需再使用 SSH Key
+    * 找到 ```#Port 22``` 將註解移除
+    * 找到 ```PasswordAuthenticate no``` 將 no 改成 yes
+    * 在檔案後面加入 ```AllowUsers {使用者名稱}```
 
 ## Step 4. 修改VM root密碼
  * ```$ sudo passwd root```。
