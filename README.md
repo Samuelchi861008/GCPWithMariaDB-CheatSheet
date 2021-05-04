@@ -30,6 +30,8 @@
     * 找到 ```#Port 22``` 將註解移除
     * 找到 ```PasswordAuthenticate no``` 將 no 改成 yes
     * 在檔案後面加入 ```AllowUsers {使用者名稱}```
+  * 重啟 SSH
+    * ```$ sudo service ssh restart```
 
 ## Step 4. 修改VM root密碼
  * ```$ sudo passwd root```。
