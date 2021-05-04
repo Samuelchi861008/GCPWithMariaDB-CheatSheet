@@ -112,7 +112,7 @@
     * 選擇 Asia -> Taipei
   * 設定 MySQL 時區
     * ```> SET GLOBAL time_zone = '+8:00';```
-  * 最後重啟資料庫 ```$ service mysqld restart ```
+  * 最後重啟資料庫 ```$ sudo /etc/init.d/mysql restart ```
 
 
 ## Step 10. Code Server 建置 (可選)
