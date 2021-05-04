@@ -94,7 +94,7 @@
   * 回到VM 將『目標代碼』加入『網路標記』
   
 
-## Step 8. 安裝 Apach
+## Step 8. 安裝 Apach (可選)
   * ```$ sudo apt-get install apache2```
   * ```$ sudo service apache2 restart```
   * 即可在 /var/www/html 中放置已寫好 html 專案
@@ -123,7 +123,7 @@
   * 在 /etc/crontab 定時啟動 shell 檔案
  
  
- ## Step 11. 安裝 Jenkins
+ ## Step 11. 安裝 Jenkins (可選)
   * ```$ sudo apt update```
   * ```$ sudo apt install openjdk-8-jdk```
   * ```$ wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -```
