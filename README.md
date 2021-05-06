@@ -21,6 +21,8 @@
     * 允許 HTTP 流量、允許 HTTPS 流量。
     * 選擇預設。
 
+![img](https://github.com/Samuelchi861008/GCPWithMySQL-CheatSheet/blob/master/gcp.png)
+
 
 ## Step 3. 修改VM root密碼
  * ```$ sudo passwd root```。
