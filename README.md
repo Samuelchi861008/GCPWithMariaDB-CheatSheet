@@ -54,7 +54,6 @@
    * ```> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '{root 要修改的密碼}';```
  * 讓設定生效
    * ```> FLUSH PRIVILEGES;``` 
- * 設定MariaDB
  * 以 root 登入 MySQL
    * ```$ mysql -u root -p```
    * 輸入重新設定後的 root 密碼
